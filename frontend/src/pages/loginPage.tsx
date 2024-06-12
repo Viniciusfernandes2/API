@@ -2,11 +2,13 @@ import { FormEvent, useContext, useEffect, useState } from "react";
 import "../styles/loginPage.css";
 import { AuthContext } from "../interfaces/IAuthContext";
 import { useNavigate } from "react-router-dom";
+import VideoComponent from "../components/LoginPage/VideoComponent";
 import { motion } from "framer-motion";
 
+
 export default function LoginPage() {
-  const [email, setEmail] = useState("guilherme@visiona.com");
-  const [password, setPassword] = useState("123");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const { SignIn, Signed } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -16,7 +18,7 @@ export default function LoginPage() {
       if (storedRole === "adm") {
         navigate("/paneladm");
       } else {
-        navigate("/relatoriopage");
+        navigate("/relatorio-page");
       }
     }
   }, [navigate, Signed]);
@@ -34,14 +36,8 @@ export default function LoginPage() {
   return (
     <div className="bloco">
       <div className="bloco1">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 1,
-            delay: 0.5,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
+        <VideoComponent />
+        <div
           className="bloco2"
         >
           <div className="bloco3">
@@ -83,7 +79,7 @@ export default function LoginPage() {
               </form>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

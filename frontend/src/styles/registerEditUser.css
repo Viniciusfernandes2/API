@@ -14,11 +14,8 @@ body{
     height: 100vh;
     margin: 0;
 
-    background-color: #F8E1D6;
-
     font-family: 'Inter', sans-serif;
 }
-
 
 .container-datas{
     display: flex;
@@ -26,6 +23,7 @@ body{
     height: 800px;
 
     z-index: 10;
+    margin-top: 265px;
 }
 
 .container{
@@ -96,8 +94,10 @@ body{
     padding-bottom: 15px;
     margin-top: 5px;
 
+    padding-top: 15px;
+
     flex-direction: column;
-    height: 365vh;
+    height: 450px;
     width: 100%;
     background-color: #FFFFFF;
 
@@ -122,13 +122,14 @@ body{
     margin-top: 5px;
 
     flex-direction: column;
-    height: 100%;
+    height: 510px;
     width: 100%;
     background-color: #f6f6f6;
 
     transition: opacity 1s ease-in-out; 
     transition-delay: 1s;
 }
+
 
 .frase1, .frase2{
     font-size: 24px;
@@ -154,10 +155,6 @@ body{
 
     padding-left: 20px;
     font-size: 14px;
-}
-
-.dark-mode .container-datas input{
-    background-color: #bababa;
 }
 
 
@@ -190,14 +187,9 @@ body{
     -moz-appearance: none; /* Para navegadores baseados em Gecko */
 }
 
-.dark-mode .container-datas select{
-    background-color: #bababa;
-
-}
 
 .label-select{
     margin-top: 30px;
-    color: black;
 }
 
 .input-funcao{
@@ -216,7 +208,7 @@ body{
 
 .inputs input:focus {
    outline: none;
-   border: 1.5px solid #44210e
+   border: 1.5px solid #D25713
 }
 
 .inputs{
@@ -253,10 +245,6 @@ body{
     background-color: #dadada;
 }
 
-.dark-mode .btn-dropdown1{
-    background-color: #bababa;
-    border: 1px solid #CCCCCC;
-} 
 
 .btn-dropdown1:hover{
     cursor: pointer;
@@ -316,6 +304,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 20px;
 }
 
 .seta-dropdown,
@@ -341,7 +330,7 @@ body{
 .btnsubmit{
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: space-between;
     width: 100%;
 }
 
@@ -364,6 +353,21 @@ body{
     background-color: #1ca349;
 }
 
+
+.btnsubmit .btnExcluir{
+    background-color: transparent;
+    width: 40px;
+}
+
+.btnsubmit .btnExcluir:hover{
+    background-color: rgb(255, 62, 62);
+    width: 40px;
+}
+
+.btnExcluir img{
+    width: 60%;
+    height: 60%;
+}
 
 .btn1.active{
     background-color: #D25713;
@@ -401,13 +405,8 @@ body{
     width: 100%;
 }
 
-/* Dark-mode */
+/* dark mode */
 
-
-.dark-mode .body{
-    background-color: #323232;
-    color: white;
-}
 
 .dark-mode .container-data-1 {
     background-color: #D0D0D0;
@@ -437,4 +436,12 @@ body{
 
 .dark-mode .btnsubmit button:hover {
     background-color: #AA450D;
+}
+
+.dark-mode .frase2 {
+    color: white;
+}
+
+.dark-mode .frase1 {
+    color: white;
 }

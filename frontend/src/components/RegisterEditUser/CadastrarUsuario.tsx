@@ -41,6 +41,9 @@ export default function CadastrarUsuario() {
           ref={roleRef}
           onChange={(e) => setRoleInput(e.target.value)}
         >
+          <option value="adm" className="option-content" disabled>
+            Selecione uma função
+          </option>
           <option value="adm" className="option-content">
             Adm
           </option>
@@ -57,7 +60,7 @@ export default function CadastrarUsuario() {
         <label htmlFor="" className="labels">
           Password:{" "}
         </label>
-        <input ref={passwordRef} type="password" />
+        <input ref={passwordRef} type="password" placeholder="Insira a senha"/>
       </div>
 
       <div
